@@ -1,0 +1,37 @@
+#!/bin/bash
+
+####################################
+#Author: bharath
+#Date: 02 AUG 2025
+#
+#Vesion:v1
+#
+#This script will report the AWS report usage
+####################################
+
+set -x
+
+#AWS S3
+#AWS EC2
+#AWS Lambda
+#AWS IAM User
+
+
+#list s3 buckets
+echo "Print list of S3 buckets"
+aws s3 ls
+# List EC2 Instances
+echo "Print list of EC2 Instances"
+aws ec2 describe-instances | jq -r '.Reservations[].Instances[].InstanceId'
+
+# List Lambda Functions
+echo "Print list of Lambda functions"
+aws lambda list-functions | jq -r '.Functions[].FunctionName'
+
+
+
+#list IAM users
+echo "Print list of IAM Users"
+aws iam list-users | jq -r '.Users[] | "\(.UserName) - \(.UserId)"'
+
+
