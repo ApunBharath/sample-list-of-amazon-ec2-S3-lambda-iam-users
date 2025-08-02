@@ -11,6 +11,10 @@
 
 set -x
 
+# Explicitly set the AWS credentials location
+export AWS_SHARED_CREDENTIALS_FILE=/home/ubuntu/.aws/credentials
+export AWS_CONFIG_FILE=/home/ubuntu/.aws/config
+
 #AWS S3
 #AWS EC2
 #AWS Lambda
