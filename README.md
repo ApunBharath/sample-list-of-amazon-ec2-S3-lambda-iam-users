@@ -39,7 +39,8 @@ Copy
 Edit
 export AWS_SHARED_CREDENTIALS_FILE=/home/ubuntu/.aws/credentials
 export AWS_CONFIG_FILE=/home/ubuntu/.aws/config
-🔄 Cron Job Setup
+
+## 🔄 Cron Job Setup
 To schedule this script to run automatically:
 
 Step 1: Make the script executable
@@ -47,7 +48,7 @@ bash
 Copy
 Edit
 chmod +x ~/cleaned-repo/resource-tracker2
-Step 2: Edit the crontab
+## Step 2: Edit the crontab
 bash
 Copy
 Edit
@@ -60,14 +61,15 @@ Edit
 0 8 * * * /home/ubuntu/cleaned-repo/resource-tracker2 >> /home/ubuntu/cleaned-repo/cronjob2.log 2>&1
 You can modify the time as needed.
 
-Step 3: Verify cron job is running
+## Step 3: Verify cron job is running
 Check the log file:
 
 bash
 Copy
 Edit
 cat ~/cleaned-repo/cronjob2.log
-🔁 Git Workflow
+
+## 🔁 Git Workflow
 After making changes to your scripts or README:
 
 bash
